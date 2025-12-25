@@ -1,0 +1,51 @@
+
+Reference data type
+
+class:
+property+functions
+"new" keyword used to create object
+Example : Employee e = new Employee() -> here e is Reference to the created object in heap 
+
+in java we don't have pointers (&a) so we can deal with pass by value , but to achieve the nature of pass by Reference , we use the objects here
+in the above case e has reference to the object.
+
+
+String:
+It is immutable, because if we try to update the value it will create new literal and points towards it, older literal will still be there
+String literals: 
+    String s1 = "hello";
+    String s2 = "hello"; // it will check if a literal "hello" is present or not , if it is already present , then s2 will point to the same s1 in String constant pool
+    String s3 = new String("hello") // it will create a new String in heap 
+
+
+Interface:
+    it has only method signature not the implementation, we can't create object for interface
+    Person interface -> Teacher and Engineer -> Student
+
+
+Array:
+int [] arr = new int[5];
+int arr[] = new int[5];
+int arr[] = {30,20,10,22,33};
+2 D array ->
+int arr[][] = new int[5][5];
+
+
+Wrapper class:
+for each primitive type we have reference type/wrapper
+Integer,Character,Short,Byte,Long,Float,Double,Boolean
+
+Advantages:
+    ->when we want to reflect changes in the original entity, like reference data type
+    ->all java collections works with reference datatype that's why it is useful 
+
+example: 
+    int a = 20;
+    Integer a1 = a; // primitive to wrapper(autoboxing)
+
+    Integer b = 20;
+    int b1 = b; // wrapper class to primitive(unboxing)
+
+
+Constant variables:
+    final keyword is used like : static final int emp_ID = 10; //if we crate  in a class directly as static is used 
