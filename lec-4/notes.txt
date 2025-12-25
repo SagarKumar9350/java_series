@@ -1,0 +1,32 @@
+variable -> container which holds a value
+int var = 32;
+
+java is static typed language -> we have to define the datatype before like , int a = 2;
+strong typed language -> we can't assign any value, we have a range for datatype
+
+Naming convention for variables
+    case sensitive
+    unicode letter and digits
+    can start with $,_,letter
+    cannot be reserved words("class","new","float",etc)
+    all small if 1 word otherwise camel casing
+    for constant variable name it should be define in capital letters
+
+Types of variables
+primitive types: 8 types
+    char -> 2 bytes ,ASCII values, range (0 to 65535)
+    byte -> range(-128 to 127),default value is 0(default value can only be assigned to class members, for method variables we have to assign values), signed(-ve is allowed) 2nd compliment
+    short -> 2 bytes,signed 2nd compliment,range(-32768 to 32767),default value is 0
+    int -> 4 bytes,signed 2nd compliment,range (-2^31 to 2^31 - 1),default value is 0
+    long -> 8 bytes,signed 2nd compliment,range (-2^63 to 2^63 - 1),default value is 0
+    float -> 4 bytes, float a  = 32.20f
+    double -> 8 bytes, doble d = 20.08d
+    boolean -> 1 bit true/false,default valus is false
+
+type conversion
+    widening/automatic conversion -> from small datatype to large datatype
+    downcasting/explicit casting -> larger to smaller , we have to typecast like (byte)value
+    promotion -> if expression crosses the previos datatype limit , it will promote
+
+Kind of variables
+    
