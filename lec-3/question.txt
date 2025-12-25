@@ -1,0 +1,30 @@
+
+Q) why in java a single file can have only 1 public class?
+
+->Main method inside public class
+    as main method is invoked by jvm(it should be accessed by jvm , that's why it is public)
+
+->public class name should be same as file name
+    suppose we make multiple public class in a file 
+    example: Employee.java
+
+    public class A{
+
+    }
+    public class B{
+
+    }
+    public class C{
+
+    }
+    .....
+    Now how will jvm know which class have main method for starting the execution , that's why file name should be equal to public class name 
+    and it should be only one
+
+    A.java
+    public class A{
+
+    }
+    class B{
+        
+    }
