@@ -1,5 +1,6 @@
 
 Reference data type
+all reference type has default value as null
 
 class:
 property+functions
@@ -34,6 +35,7 @@ int arr[][] = new int[5][5];
 Wrapper class:
 for each primitive type we have reference type/wrapper
 Integer,Character,Short,Byte,Long,Float,Double,Boolean
+these are also default to null
 
 Advantages:
     ->when we want to reflect changes in the original entity, like reference data type
