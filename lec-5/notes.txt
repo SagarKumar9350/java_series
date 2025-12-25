@@ -1,0 +1,44 @@
+
+why don't we get exact 0.7 rather 0.699999988079071 
+
+IEEE 754
+
+in float we have bits distribution as : 
+    1 bit(sign)+8 bit(exponent)+23 bit(mantissa)
+
+example : 4.125
+
+step1 -> convert it into binary
+100.001
+
+step2-> make it in the form of (1.value)*2^exponent
+100.001 -> 1.00001 * 2^2
+value after dot (00001) is known as mentissa and power of 2 is exponent here it is (2)
+
+step3 -> add bias in exponent
+127+2 , for float bias is 127
+
+step4 -> represent in bits
+0 10000001 00001000000000000000000
+
+again convert it into the original value
+(-1)^sign + (1+mantissa)* 2^e-127
+it will give 4.125 
+
+here we get the same value
+
+example 2 : 0.7
+
+step1 -> converting in binary 
+it will give a recurrence value (0110 0110 0110 ... ), it will not terminate
+as a result we will not get the correct mentissa 
+so it will store that value  as a result we get little small value like 6.9990293.....something
+
+
+in case of double(64 bit)
+the representation is
+1 bit(sign)+11 bit(exponent)+ rest bit(mentissa)
+the bias is 2^10 -1 = 1023
+
+
+so instead of this we use bigDecimal for fraction values
