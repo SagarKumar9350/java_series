@@ -1,0 +1,51 @@
+
+method:
+    used to perform certain task
+    it's a collections of instructions that perform some specific task
+    used to bring code reusability and readability
+
+declaration: public int sum(int a, int b){}
+
+Access specifier:
+    public -> method can be accessed through any class in any package(collection of similar logic/classes  (folder))
+    private -> method can be accessed only in the same class
+    protected -> can be access by other classes in same package or other sub-classes in different paackage
+    default -> it can only be used by classes in same package
+
+Return type: void,int ,etc.
+
+Method name: some kind of action,camel casing
+
+Parameters: it can be empty, or list of variables
+
+Types of Methods:
+    system defined method: methods that are already defined and ready to use in java like Math.sqrt()
+    user defined method: created by user
+    overloaded method: more than one method with same name in same class (it do not consider return type , it only diffentiated based on arguments)
+    overridden method: sub class has the same method as parent method (signature should be same)
+        parent -> doctor        //inheritance
+        parent d = new doctor() //making instance
+        d.somemethod()          // it will resolve at run time and check for somemethod() first in doctor class than in parent class.
+    static method: (important)
+        these are associated with class
+        can be called just with class name
+        static mehtod can not access non static instance variables and methods
+        it cannot be overridden(as overriding is done at run time but static deals with compile time binding)
+            if we try to override -> it will hide the method, as method is called with classname.method() so they will call respective methods.
+    
+    when to declare method static:
+        -> methods which do not modify the state of the object can be declared static
+        -> utitity method which do not use any instance variable and compute only on arguments
+
+    final method: final method cannot be overridden in java
+        as the implementation can't be changed so no use of overriding
+    abstract method: only defined in abstract class, only method declaration is done, its implementation is done in child classes
+        example: public abstract void print();
+
+
+variable arguments: when number of arguments is not fixed
+    only one variable argument is present in the method
+    it should be the last argument in the list
+    example: public int sum(int ...variable){
+        //we can loop on the variable list
+    }
