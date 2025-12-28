@@ -50,4 +50,4 @@ example:
 
 
 Constant variables:
-    final keyword is used like : static final int emp_ID = 10; //if we crate  in a class directly as static is used 
+    final keyword is used like : static final int emp_ID = 10; //if we create  in a class directly as static is used 

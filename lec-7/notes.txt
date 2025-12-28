@@ -29,7 +29,7 @@ Types of Methods:
     static method: (important)
         these are associated with class
         can be called just with class name
-        static mehtod can not access non static instance variables and methods
+        static method can not access non static instance variables and methods
         it cannot be overridden(as overriding is done at run time but static deals with compile time binding)
             if we try to override -> it will hide the method, as method is called with classname.method() so they will call respective methods.
     

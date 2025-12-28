@@ -26,7 +26,8 @@ primitive types: 8 types
 type conversion
     widening/automatic conversion -> from small datatype to large datatype
     downcasting/explicit casting -> larger to smaller , we have to typecast like (byte)value
-    promotion -> if expression crosses the previos datatype limit , it will promote
+    promotion -> if expression crosses the previous datatype limit , it will promote
 
-Kind of variables
+Kind of variables:
+    local,instance/member variable,method Parameters,constructor Parameters
     
