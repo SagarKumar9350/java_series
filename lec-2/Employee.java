@@ -22,7 +22,7 @@ public class Employee {
 2) jre: java runtime environment
     jvm + class libraries(java.Math,java.util,etc.)
 3) jdk: java development kit
-    progam lanuages(.java),comiler(javac),debugger
+    progam languages(.java),compiler(javac),debugger
 
 All three are platform dependent but (java code -> byte code) is platform independent
 
