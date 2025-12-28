@@ -1,0 +1,49 @@
+
+Constructor:
+    use to create an instance and initialize the instance variable
+    -->then what does "new" used if constructor is for insitializing the instance -> "new" is used to tell compiler to call constructor 
+    similat to method except:
+        name:same as class name
+        return type:Constructor doesn't have return type
+
+
+
+
+important questions:
+
+why constructor name is same as class name, and it doesn't have return type?
+    to identify that it is a constructor also  it has implicit return type of class 
+
+why constructor cannot be final ?
+    person -> student
+    here in this case person constructor will be person() without return type now suppose if student also inherit the constructor -> it will have person()
+    constructor but it will break the role to have same name for student class so it will also expect a return type like a regular method as a result 
+    constructor can't be overrided
+    and final is used to prevent overriding also so that condition is already achieved in constructor so no need to use final
+
+why constructor cannot be abstracted?
+    as abstract method implementation is done in inherited class but constructor can't be inherited
+
+why constructor cannot be static?
+    ->because constructor is used to initialize the instance variables also , if we make it static then how will it access non-static variables
+    ->we can't able to use super
+
+why constructor cannot be defined in interface?
+    because we can't create object of interface then no use of constructor
+
+
+Notes:
+
+->init block is used even before constructor as it is used for setup purposes
+
+->constructor cannot be inherited
+->default constructor is provided by java, until we haven't defined any constructor -> if we defined any constructor we have to define default constructor
+->no argument constructor similar to default but user defined
+->parameterized constructor
+->overloading in constructor is also done but it cannot override
+->private costructor: we cannot create object outside of that class, so we have to make another static method ( in the class to call constructor and 
+    return object through it) that is used in another class to create object directly using class name(because of static method)
+->constructor chaining:
+    this: points to the constructor according to the parameters, like-> this(val1,val2), works in same class only
+    super: constructor will be called from parent->child for this if we create child instance directly child constructor will first call super() 
+        to call parent constructor.
