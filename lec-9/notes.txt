@@ -1,0 +1,49 @@
+
+2 types of memory(RAM):jvm manages the memory
+    stack
+    heap
+
+stack:
+    every thread have a stack
+    stores temporary variables and separate memory block for methods.
+    stores primitive datatype
+    stores reference of heap object
+        strong reference: Person pobj = new Person() // garbage collector does not free the memory
+        weak reference: WeakReference <Person> weakPerson = new WeakReference<Person> // garbage collector free the value and the reference will be pointing to null
+        soft reference: similar to weak // but memory will be free by garbage collector only when it is really necessary
+    each thread has its owm statck memory
+    variables within a scope is only visible and as soon as any variable goes out of the scope, it get deleted from the stack(in lifo order)
+    when stack memory gets full we get error java.lang.stackOverflowError
+
+
+System.gc() run through jvm that's why automatic garbage collection
+when no reference is present garbage collector is allowed to free the memory
+algorithm used:
+    mark and sweep: mark if no reference to the object and delete
+    mark and sweek with compaction: compact to make prevent external fregmentation
+
+versions of gc:
+    serial gc: 1 thread is used, more pause time,slow
+    parallel gc (default from java 8):currently used,parallel threads
+    concurrent mark and sweep (cms): application threads doesn't stop while gc thread runs ,but it is not guaranteed
+    G1 garbage collector: guarantees that application thread doesn't stop while gc thread runs
+
+gc is expensive task
+when gc runs everything stops,all application thread is stopped
+
+
+Heap diagram:
+            heap                             nonheap
+    (young generation + old generation)    (metaspace) -> class variables,constants,metadata info
+    (eden + survivor(s0 + s1))
+    new memory is created in eden and then objects are moved to s0 then s1 and osscilated between then until predefined limit is reached then it is promoted to old generation
+    minor gc work on young generation and major gc work on old generation
+
+
+Heap:
+    stores object
+    heap memory is shared among all the threads
+    heap also contains string pool
+    when heap full the error is: java.lang.OutofMemoryError
+
+
