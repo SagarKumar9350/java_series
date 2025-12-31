@@ -1,0 +1,22 @@
+
+Generic Class:(important) refer the notes
+    if we create class Print and uses the parent class of all (Object) to hold values it will create the confusion of datatype
+    to prevent this we use generic class using " class Print<T> " where <T> can be any non-primitive object
+    we can use more than one parameter also: Print<K,V>
+    we can also create generic method:
+        type parameter should be before the return type of method declaration
+        type parameter scope is limited to method only
+    Raw type:
+        it's a name of the generic class or interface without any type argument
+        we can instantiate the object as concrete class object creation, it will take "Object" as the type and can accept any type
+    Bounded generics:
+        it can be used at genetic class and method
+        upperbound: <T extends Number> // now we can pass Number and its child , we have bound the upper limited
+        multibound: <T extends superclass & interface1 & interface2> // first restrictive type should be concrete class, can use multiple interfaces
+    Wildcard: it is used because in case of parameter of list we can't hold childobject list in parentreference of list
+        upperbound: <? extends UpperBoundClassName> // class name and below
+        lowerbound: <? super LowerBoundClassName> //class name and above
+        unbounded: it can only read
+    type erasers: when code is converted in byte code then all generic will be converted like T -> Object,etc..
+    
+
