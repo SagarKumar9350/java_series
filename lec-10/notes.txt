@@ -1,0 +1,36 @@
+
+Concrete class:
+    can create instance using new keyword
+    all method in this have implementation
+    it can also be child class from interface or extends abstract class
+    class modifier can be "public" or "package private" 
+
+Abstract class(0 to 100%):
+    hide internal features and show important implementation only
+    can have concrete as well as abstract method
+    cannot create object of this class
+
+Super and Sub class:
+    in case of absence of super class, Object is the parent of all class
+    example: Object obj1 = new Person(1); // parent reference holding object of child class
+
+Nested class:
+    2 types: static , non static/inner class
+    class within a class is called nested class
+    if a class A is only used by single class B then we can create A inside be
+    also help to group logically related classes in one file
+    scope is same as the outer class
+    can be created as a public,private,protected,default
+    inheritance can also be done in nested class:
+        if static nested class is inherited: extends OuterClass.NestedClass
+        if inner class is inherited: extends OuterClass.InnerClass // but we have to create Object of outer class and call super() on it in the constructor of child class
+
+    static nested class:
+    non-static nested class/inner class:
+        local inner class: defined in any block(method,if,etc...) can only be default,cannot be initiated outside of the block as the scope is inside that block
+        member inner class: can be public,private,protected,default
+        anonymous inner class: (important)
+            innerclass with no name
+            when we want to override the behaviour of the method without even creating any subclass
+
+
