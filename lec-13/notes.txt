@@ -1,0 +1,34 @@
+
+Singleton class:
+    objective is to create only 1 and 1 objective
+
+Different ways of creating Singleton class
+    Eager initialization: something in advance
+        issue: even the object is not instantiated memory is stored already
+    Lazy initialization: reference is created only and in method if it is null -> new object is created and assigned
+        issue: if more than 1 thread saw null at the same time they multiple instances can be created
+    Synchronized method: method will be Synchronized , so one thread at a time
+        issue: make the process slow because of lock/unlock
+    Double checked Locking: Synchronized is used after first checked
+        issue: memory level, (thread -> cache -> memory) now it may happen that after object creation in one thread
+            the cached haven't been synced and other thread check its cache which doesn't does any object creation
+            that will lead to creation of another object again.
+        To solve this issue: volatite keyword is used in reference creation
+            it will directly work with memory , not the cache
+    Bill Plug Solution: solved the issue of eager initialization by using private static nested class
+    ENUM: by default its all constructors are private, so as per jvm, each jvm has only one snapshop present
+        example: enum DBConnection{
+            INSTANCE;
+        }
+
+
+Immutable class:
+    state cannot be changed of the created object
+    declare class as final so that it cannot be extended
+    all class members should be private,so that direct access can be avoided
+    class members are initialized only once using constructor
+    should not be any setter methods,which is generally used to change the value
+    just getter methods,and returns copy of the members variables(so that the actual values could not be changed)
+
+Wrapper class:
+    for each primitive type their is a wrapper class
