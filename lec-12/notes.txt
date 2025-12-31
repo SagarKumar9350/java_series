@@ -1,0 +1,43 @@
+
+POJO:
+    "plain old java object"
+    contains variables,getter,setters
+    class should be public
+    public default constructor
+    no annotations should be used like @Table,@Entity,etc
+    should not extend any class or implement any interface.
+    Advantage:
+        it is useful for single source for other classes using this class
+
+ENUM class:
+    collection of CONSTANTS (static final)
+    cannot extend any class, as it internally extends java.lang.Enum class
+    it can implement interfaces
+    can have variables,constructor,methods
+    cannot be initiated(as its constructor will be private only, even you give default, in bytecode it make it private)
+    no other class can extend Enum class
+    it can have abstract method, and all the constant should implement that abstract method
+
+    it will always have certain values starting from 0 , if no values has been assigned to it
+    methods:
+        values(): list of enums
+        ordinal(): to get the default values
+        valueOf(): match the exact values passed
+        name(): names of the constant
+    Enum with custom values:
+        every constants will get the variables defined in the classes
+        if method declared then all constants can use it
+    Method override in enum:
+        we can override the implementation for particular constants
+        example: constant1{ // override the method here}
+    enums with abstract method:
+        all constants should provide the implementation of the abstract method
+    enums with interface:
+        when we want to give some functionality to all constants we can implement interface and give implementation,
+        so that all can use it just like simple merhod is shared among them
+    Advantage of enum over static final variables:
+        readability
+        control over method
+
+FINAL class:
+    final class cannot be inherited
