@@ -1,0 +1,80 @@
+
+Exception handling:
+    event occur during the execution of the program
+    it will disrupt your program normal flow
+    it creates the Exception object ,which contains information about the Error like:
+        type of Exception,message,stack trace(from the point of exeption to the starting point)
+    Runtime system use this Exception Object and find the class which can handle it
+
+hirerachy:
+
+Object -> Throwable:
+    Error: related to jvm,not in out hand , it is also unchecked
+        OutofMemoryError
+        StackOverflowError,etc..
+    Exception: respect to our code ,in out hand upto certain point
+        unchecked/Runtime exception:
+            ClassCastException
+            ArithmeticException
+            IndexOutOfBoundException: ArrayIndexOutOfBoundException,StringIndexOutOfBoundException
+            NullPointerException
+            IllegalArgumentException: NumberFormatException
+
+        checked/compile time exception:
+            ClassNotFoundException
+            InterruptedException
+            IOException: FileNotFoundException,EOFException,SocketException
+            SQLException
+
+
+
+
+Runtime Exception:
+    occur during runtime and compile not forcing us to handle them
+
+Compile time Exception:
+    compiler verifies them during the compile time of the code and if not handled properly,code compilation will fail
+    can handle using:
+        "throws" // throws used if the method can throw exception , now its caller responsibility to handle it
+        "try/catch" //
+
+
+How to handle the exception: using try,catch,finally,throw,throws,
+
+try: 
+    code block which can give exception
+    after try either catch block or finally
+catch: 
+    to catch the exception from try block // catch(ExceptionType e){// handle e}
+    can use multiple catch after try block
+    catch block is used to catch all exception which can be thrown in the try block
+    if parent Exception is used to handle then use it after the specific Exception handling
+    one catch block can catch many Exception // catch(ExceptionType|ExceptionType e){}
+throw: 
+    use to throw any new exception
+    to re-throw the exception
+throws: 
+    used with the method signature
+finally:
+    always executed even if you return from try block or catch block
+    only 1 finally block
+    mostly used for closing the object,adding logs,etc
+    in case of jvm related issues like,out of memory,system shut down or our process is forcefully killed, then finally 
+        block do not get executed
+
+
+Creating own custom exception:
+    using extends exception
+
+Advantage of Exception handling:
+    clean our code by seperating the exception handling from regular code
+    it allow your progam to recover from Error
+    allow to add more information,which support debugging
+    improves security by hiding the sensitive data
+
+Disadvantage:
+    little expensive,if stack trace is huge and it is not handled or handled at parent class
+    try to avoid using exception handling ,if it can be done in other manner(like using if,else condition etc..)
+
+
+
