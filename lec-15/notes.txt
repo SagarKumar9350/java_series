@@ -1,0 +1,30 @@
+
+Interface features:
+
+1) default method (java8):
+    before java8 methods are by default abstract
+    if any new methods has been added in the interface all supclasses has to implement that
+    To overcome this:
+        default methods are introduced: it has implementation , so no need to override it in the subclasses
+    why it is introduced in java8:
+        to introduced feature in legacy code , so that it doesn't have to be implemented by the previous subclasses
+    
+default and multiple inheritance:
+    if implemented classes again have ambiguity of same common name then implementation has to provided by the child classes
+
+extending default methods:
+    ->can be directly passed to child without updating anything
+    ->if method became abstract then the next child class has to give implementation
+    ->can be overrided in the child class
+
+
+2) Static mehtod(java8):
+    we can provide the implementation of the method in the interface
+    bu it cannot be overriden by classes which implement the interface
+    we can access it using interface name itself
+    its by default public
+
+3) Private methods and private Static methods(java9):
+    can provide implementation
+    private interface method cannot be abstract,means we have to provide the definition
+    it can be used inside of the particular interface only
