@@ -1,0 +1,20 @@
+
+Functional interface:
+    if interface contains only 1 abstract method
+    @FunctioanlInterface keyword -> restrict to 1 abstract method,other methods are allowed
+
+Lambda Expression:
+    its a way to implement the functional interface
+    minimize the verbose
+    ()->{};
+
+types of functional interface: present in java.util.function
+    Consumer:represent an operation,that acccept single input parameter and return no result
+    supplier:no input parameter but returns value
+    Function:accept input ,process something and return also
+    Predicate: accept one argument but returns boolean
+
+Handle use cases when functional interface extends from other interface:
+    1)functional interface extending non functional interface // condition of one abstract method should follows
+    2)interface extending functional interface
+    3)functional interface extending functional interface
