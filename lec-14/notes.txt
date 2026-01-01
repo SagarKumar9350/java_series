@@ -1,0 +1,49 @@
+
+Interface:
+    "interface" keyword used
+    only public and default modifier is allowed
+    comma separated list of parent interfaces
+
+
+why we need interface?
+->abstraction: we can achieve full abstraction
+->polymorphism: interface can be used as a datatype to hold the instance of the child class instance and object is decided at runtime
+->multiple inheritance: 
+
+methods in interface:
+    all methods are implicit public only
+    method cannot be declared as final
+
+fields in interface:
+    public,static and final
+    cannot make them private and protected
+
+Interface implementation:
+    overriding method cannot have more restrict access specifier
+    concrete class must override all the methods declared in the Interface
+    abstract class is not forced to override all the methods
+    class can implement multiple interfaces
+
+Nested interface:
+    declared within another interface
+    declared within another class
+    generally used to group logical related interfaced 
+
+    rules:
+        nested interface inside interface must be public
+        nested interface inside class can have any access specifier
+        when implementing outer interface inner interface implementation is not required and vice versa
+
+difference between abstract class and interface:
+    keyword,extends vs implements,methods,
+    abstract -> can extends from another class and multiple interfaces , interface -> can only extends from another interfaces
+    abstract -> variables as static,non static,final,non final etc,  interface -> variables are by default constants
+    abstract -> variables and methods can be private,protected ,public,default,  interface -> variables and methods are by 
+        default public(in java9 ,private method is supported)
+    abstract->can have constructor, interface -> cannot have constructor
+    abstract -> to declare method abstract , we have to use "abstract" keyword and it can be protected,public,default
+        interface->no keyword is needed to make mehtod abstract,and by default its public 
+    
+
+    Note:
+    from java 8 onwards interface can have default,static and private methods too,where we can provide implementation
