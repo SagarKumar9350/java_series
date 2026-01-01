@@ -76,5 +76,3 @@ Disadvantage:
     little expensive,if stack trace is huge and it is not handled or handled at parent class
     try to avoid using exception handling ,if it can be done in other manner(like using if,else condition etc..)
 
-
-

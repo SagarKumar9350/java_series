@@ -1,0 +1,32 @@
+
+Operators in java:
+
+expression: consist of one or more operand or zero or more Operators
+
+Categories of operators in java:
+
+1)Arithmetic operators
+2)Relational operators: compares two operand Relation
+    ==,!=,>,<,>=,<=
+3)Logical operators: combines 2 or more condition
+    && (if first is false it will not compute the other part), || (if first is true then not compute the other)
+4)Unary operators: requires only single operand
+    ++,--,+(uniray plus),-(unary minus),!(logical not)
+5)Assignment operators:
+    =,+=,-=,*=,/=,%=
+6)Bitwise operators: (important)
+    &,|,^,~(bitwise not)
+    ~ : generally its formula is -(n+1)
+        it can be come in unary too
+        to get negative bit representation of number : take 2's compliment -> one's compliment then add 1
+        example : 5 is 0101 -> 1010 + 1 -> 1011 is equal to (-8+2+1) = -5
+7)Bitwise Shift operators: (important)
+    <<(signed left shift), >>(signed right shift), >>>(Unsigned right shift), there is no <<<(Unsigned left shift)
+8)Ternary operator:
+    (condition) ? expression1 : expression2
+9)Type comparison operator: for type checking
+    instanceof (sometimes also shown under relational operators list) as it returns boolean value
+    example: obj instanceof ParentClass
+
+
+priority of the operators: refer the notes
