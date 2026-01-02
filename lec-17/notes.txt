@@ -1,0 +1,17 @@
+Refer notes for this topic
+
+Reflection in java:
+    use to examine the classes,methods,fields,interfaces at runtime and possible to change the behaviour of the class too
+    for example:
+        present methods
+        present fields
+        return type of the methods
+        modifier of the class
+        what all interfaces class has implemented
+        change the value of public and private fields etc..
+
+
+Issues:
+    it breaks the concept of singleton class,by creating instance by setting the accessiblility of constructor "true".
+    Reflection is slow
+    so it is discouraged to use
