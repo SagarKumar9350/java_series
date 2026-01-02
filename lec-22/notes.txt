@@ -1,0 +1,23 @@
+
+Collection Framework:
+    group of objects
+    present in java.util.package
+    Framework provide us the architecture to manage these group of objects i.e. add,update,delete,search,etc
+
+why Collection Framework:
+    to introduce common interface
+
+2 set of collection:
+    iterable: added in java 1.5
+    map:
+
+ways to traverse the collection
+    iterator method
+    forEach() method: it uses lambda expression
+
+Collection vs Collections:
+Collection:
+    part of java collection Framework, its an interface which exposes various methods implemented by various collection classes
+    like ArrayList,Stack,LinkedList,etc
+Collections:
+    its a utility class and provide static methods,which are used to operate on collections like swapping,searching,reverse,copy,etc..
