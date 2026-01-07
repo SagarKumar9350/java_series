@@ -1,0 +1,18 @@
+
+Queue:
+    is an interface, child of collection interface,follows FIFO approach
+    6 methods -> add()(exception),offer(),poll(),remove()(exception),peek(),element()(exception)
+    
+
+priorityqueue:
+    min and max
+    natural ordering by default -> ascending order(min heap)
+    traversal is done -> level wise (not in the order)
+    time complexity:
+        add,offer,poll & remove head element -> O(logn)
+        peak:O(1)
+        remove arbitary element: O(n)
+
+Comparator and comparable: helps in sorting
+
+

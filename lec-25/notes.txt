@@ -1,0 +1,43 @@
+
+Hashmap:
+
+Internal working:
+    hash:
+    key:
+    value:
+    next:
+
+get(key): internal working
+here for same key same hash is generated.
+    example: h(key) = 2345%size == 0,1,2...
+if same key is used -> it will replace the previous value at that key
+
+But their may be case when different key will generate same hash value:
+    then the value will be added as a linked list to that same bucked with the help of next of previous element
+So to search for a value using get(5):
+    it will generate hash-> their might be same hash for different values and they make a list at that position/index
+        therefore combination of hash and key is used for searching
+
+Contract between hashCode and equal mehod:
+    -> if 2 objects are same then their hash should be same
+    -> if 2 objects hash are same then it doesn't mean that 2 objects are equal
+
+Time complexity:
+    average: O(1)
+    worst case: O(n) but generally it will be converted to balanced binary search tree so : O(logn)
+
+put(key,value): how data is stored, internal working
+Load factor: default 0.75
+    it help to reduce the collision
+    example: if size of hashtable = 16, using load factor we get value 16*0.75 = 12
+    now when the size of list reached 12,(now it will re-hash) the size of 16 will be doubled to 32 
+    and again same procedure will be applied
+    this help in increasing the indexes, as a result collision is decreased
+
+Treeify_threshold = 8
+    when the list size increases even after the above method and crosses treeify threshold value
+        -> list will be converted to balanced binary search tree
+    this will give the time complexity of O(logn) in worst case
+
+Hashmap is not thread safe,hashTable is thread safe.
+
