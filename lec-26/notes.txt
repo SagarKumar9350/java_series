@@ -1,0 +1,27 @@
+
+LinkedHashMap:
+    helps in maintains insertion order
+    helps in maintain access order -> frequently used from less to high
+    similar to HashMap,but also uses Double LinkedList
+
+now we have fields:
+    hash,key,value,next -> previously also present in HashMap
+    before,after -> newly added
+    next -> is for the next element in the bucket
+    before,after -> is used for the ordering of the values inserted, like doubly LinkedList
+
+accessorder: true -> for the frequency of usage from less to high
+
+It can be used for caching: because of frequency concept
+
+Time complexity: 
+    average O(1)
+    worst: O(n) or O(logn)
+
+Is is not thread safe
+
+
+TreeMap:
+    sorted according to the natural ordering of the key, or by comparator provided
+    it uses Red-black tree(self balancing binary search tree)
+    O(logn) time complexity
